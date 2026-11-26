@@ -1,0 +1,35 @@
+class Solution {
+    public int mostWordsFound(String[] sentences) {
+        int max = 0;
+        for(int i = 0 ; i < sentences.length ; i ++){
+            String[] arr = sentences[i].split(" ");
+            if(arr.length > max){
+                max = arr.length;
+            }
+        }
+        return max;
+    }
+}
+
+/*
+class Solution {
+    public int mostWordsFound(String[] sentences) {
+        int max = 0;
+        for(int i = 0 ; i < sentences.length ; i++){
+            if(max < countWords(sentences[i])){
+                max = countWords(sentences[i]);
+            }
+        }
+        return max;
+    }
+    public int countWords(String s){
+        int count =1;
+        for(int i =0 ; i < s.length() ;i++){
+            if(s.charAt(i) == ' '){
+                count++;
+            }
+        }
+        return count;
+    }
+}
+*/
